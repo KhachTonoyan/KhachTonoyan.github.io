@@ -75,7 +75,7 @@ const [loc,setLoc] = useState({})
       </Container>
           <Container style={{width:"400px",height:"400px",position:"absolute",right:0,bottom:0,padding:0}}>
           <Map
-              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAUt83riUOAQQam98cO_HanffToO9daMl0"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places" // you need google map API key -- &key=APIKEY --
               loadingElement={<div style={{ height: `100%` }}/>}
               containerElement={<div style={{ height: `100%`}}/>}
               mapElement={<div style={{ height: `100%` }}/>}
