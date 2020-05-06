@@ -30,4 +30,6 @@ const toC = (a) => a - 273.15;
 
 const img = "http://openweathermap.org/img/wn/";
 
-export {max,createWeekDays,toC,img,ceateDay}
+const weekDays = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+
+export {max,createWeekDays,toC,img,ceateDay,weekDays}
