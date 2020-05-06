@@ -35,7 +35,7 @@ function Details({days,info}) {
                 break;
             default:
             }
-        }else if(+info.match.params.day !== 0 && +info.match.params.day !== 1 && +info.match.params.day !== 2 && +info.match.params.day !== 3 && +info.match.params.day !== 4 && +info.match.params.day !== 5 && +info.match.params.day !== 6) {
+        }else if(!(+info.match.params.day >= 0 && +info.match.params.day <= 6)) {
             thisDay.error = "We can't find this page"
         }
     });
