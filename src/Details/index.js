@@ -5,7 +5,6 @@ import {Container } from "@material-ui/core"
 
 function Details({days,info}) {
     const thisDay = ceateDay();
-    console.log(days);
     days.list && days.list.forEach(item => {
         if(+info.match.params.day === new Date(item.dt_txt).getDay()){
             thisDay.val.push(Math.round(toC(item.main.temp)));
@@ -17,7 +16,6 @@ function Details({days,info}) {
             thisDay.error = "We can't find this page"
         }
     });
-    console.log(thisDay);
     return(
         <Container style={{display:"flex",textAlign:"center",flexDirection:"column"}}>
             <NavLink to='/' activeClassName={"none"}>
