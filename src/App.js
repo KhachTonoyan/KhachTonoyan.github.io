@@ -18,19 +18,16 @@ const [loc,setLoc] = useState({})
     useEffect(() => {
         let lat,lon;
          navigator.geolocation.getCurrentPosition( a => {
-            console.log(a.coords.latitude);
             setLoc({lat:a.coords.latitude,lon:a.coords.longitude})
             lat = a.coords.latitude;
             lon = a.coords.longitude;
              fetch(locFetch + `&accept-language=en&lat=${lat}&lon=${lon}&format=json`)
                  .then(res => res.json())
                  .then(data => {
-                        console.log(data);
                      setLoading(true);
                      fetch(apiFetch + data.address.city + "&appid=" + id)
                          .then(res => res.json())
                          .then(data =>{
-                             console.log(data);
                              setDays(data);
                              setLoading(false)
                          }).catch(err => {
@@ -51,11 +48,9 @@ const [loc,setLoc] = useState({})
     fetch(apiFetch + inpVal + "&appid=" + id)
         .then(res => res.json())
         .then(data =>{
-          console.log(data);
             setDays(data);
             setInp("");
             setLoading(false);
-            console.log(days)
         }).catch(err => {
           console.log(err)
     })
