@@ -1,2 +1,7 @@
-# WeatherForecast
-React JS (with hooks)
+## Available Scripts
+
+[HomePage]('/')
+
+In the project directory, you can run:
+
+### `npm start`
